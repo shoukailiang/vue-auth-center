@@ -37,7 +37,7 @@
     outline: none;
   }
   .login_page .form_body input[type=text].btn, .login_page .form_body input[type=password].btn, .login_page .form_body input[type=button].btn, .login_page .form_body input[type=submit].btn {
-    background: #345dc2;
+    background: #f45154;
     width: 320px;
     color: #fff;
     border: none;
@@ -56,7 +56,7 @@
   }
   .login_page .form_body .is_go {
     float: right;
-    color: #345dc2;
+    color: #f45154;
     height: 18px;
     line-height: 18px;
     font-size: 14px;
@@ -73,7 +73,7 @@
       margin-top: 20px;
   }
   .login_page .form_body .agree a{
-      color: #345dc2;
+      color: #f45154;
       text-decoration: none;
   }
   .login_page .form_body .agree a:hover {
@@ -185,8 +185,8 @@
     height: 59px;
   }
   .login_page .tabs .on {
-    border-bottom: 2px solid #345dc2;
-    color: #345dc2;
+    border-bottom: 2px solid #f45154;
+    color: #f45154;
   }
   .login_page .r180 {
     transform: rotateY(-180deg);
@@ -225,7 +225,7 @@
     bottom: 15px;
     width: 166px;
     height: 46px;
-    background: #345dc2;
+    background: #f45154;
     color: #fff;
     border: none;
     outline: none;
