@@ -37,11 +37,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a {
+/* a {
   color: #333;
   cursor: pointer;
   text-decoration: none;
-}
+} */
 .nickname {
   color: #f45154 !important;
 }

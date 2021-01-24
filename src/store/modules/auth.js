@@ -1,4 +1,4 @@
-import { login,logout } from '@/api/auth'
+import { login, logout, refreshToken } from '@/api/auth'
 import { PcCookie, Key } from '@/utils/cookie' // 对cookie操作
 
 const state = {
@@ -70,6 +70,31 @@ const actions = {
             // 重置状态
             commit('RESET_USER_STATE')
             window.location.href = redirectURL || '/'
+        })
+    },
+    // 发送刷新令牌
+    SendRefreshToken({ state, commit }) {
+        return new Promise((resolve, reject) => {
+
+            // 判断是否有刷新令牌
+            if (!state.refreshToken) {
+                commit('RESET_USER_STATE')
+                reject('没有刷新令牌')
+                return
+            }
+
+            // 发送请求
+            refreshToken(state.refreshToken).then(response => {
+                console.log('获取到的新认证令牌', response.data)
+                // 更新用户状态新数据
+                commit('SET_USER_STATE', response.data)
+                resolve() // 正常钩子
+            }).catch(error => {
+                // 重置状态
+                commit('RESET_USER_STATE')
+                reject(error)
+            })
+
         })
     },
 

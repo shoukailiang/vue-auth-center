@@ -137,7 +137,7 @@ export default {
   async created() {
     // 判断url中是否带有redirecturl参数
     if (this.$route.query.redirectURL) {
-      this.redirectURL = this.$router.query.redirectURL;
+      this.redirectURL = this.$route.query.redirectURL;
     }
     // 获取协议内容
     const xieYiContent = await getXieyi();
@@ -176,7 +176,7 @@ export default {
           const { code, message } = response;
           if (code === 20000) {
             // 跳转回来源页面
-            // window.location.href =this.redirectURL;
+            window.location.href =this.redirectURL;
           } else {
             this.loginMessage = message;
           }

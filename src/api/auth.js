@@ -56,3 +56,17 @@ export function logout(accessToken) {// accessToken 访问令牌，知道是哪�
         }
     })
 }
+
+
+// 刷新令牌获取新的认证信息
+export function refreshToken(refreshToken) {
+    return request({
+        headers,
+        auth,
+        url: '/auth/user/refreshToken',
+        method: 'get',
+        params: {
+            refreshToken
+        }
+    })
+}
