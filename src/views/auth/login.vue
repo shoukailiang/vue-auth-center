@@ -64,7 +64,7 @@
               />
               <input
                 type="password"
-                v-model="registerData.repassword"
+                v-model="registerData.repPassword"
                 placeholder="确认密码"
               />
               <div class="error_msg">{{ regMessage }}</div>
@@ -129,7 +129,7 @@ export default {
         // 注册表单数据
         username: "",
         password: "",
-        repassword: "",
+        repPassword: "",
         check: false,
       },
     };
@@ -220,7 +220,7 @@ export default {
         return false;
       }
 
-      if (this.registerData.password !== this.registerData.repassword) {
+      if (this.registerData.password !== this.registerData.repPassword) {
         this.regMessage = "两次输入密码不一致";
         return false;
       }
@@ -239,6 +239,9 @@ export default {
           if (code === 20000) {
             // 注册成功，切换登录页
             this.changetab(1);
+            // 清空表单
+            this.registerData= {}
+            this.regMessage = ""
           } else {
             this.regMessage = message;
           }
