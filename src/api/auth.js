@@ -7,7 +7,7 @@ const headers = {
 // 请求头添加 Authorization: Basic client_id:client_secret
 
 const auth = {
-    username: 'shoukailiang',// client_id    
+    username: 'community-admin',// client_id    
     password: '123456' // client_secret
 }
 // 登录，获取 token 接口
