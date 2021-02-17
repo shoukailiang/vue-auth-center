@@ -119,7 +119,7 @@ export default {
       subState: false, //提交状态
       xieyi: false, // 显示隐藏协议内容
       xieyiContent: null, // 协议内容
-      redirectURL: "", // 登录成功后重写向地址
+      redirectURL: "http://localhost:3000", // 登录成功后重写向地址
       loginData: {
         // 登录表单数据
         username: "",
