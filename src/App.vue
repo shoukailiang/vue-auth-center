@@ -36,13 +36,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
-
-/* a {
-  color: #333;
-  cursor: pointer;
-  text-decoration: none;
-} */
 .nickname {
-  color: #f45154 !important;
+  color: #f45154;
 }
 </style>

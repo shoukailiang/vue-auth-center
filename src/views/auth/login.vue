@@ -116,7 +116,7 @@ export default {
       reverse: 1, // 旋转 1 登录，2 注册
       loginMessage: "", //登录错误提示信息
       regMessage: "", //注册错误提示信息
-      subState: false, //提交状态
+      subState: false, //提交状态,减少请求
       xieyi: false, // 显示隐藏协议内容
       xieyiContent: null, // 协议内容
       redirectURL: "http://localhost:3000", // 登录成功后重写向地址
@@ -169,7 +169,7 @@ export default {
         return false;
       }
       this.subState = true; // 提交中
-      // 提交登录，不要以/开头
+      // 提交登录 vuex中发送请求
       this.$store
         .dispatch("UserLogin", this.loginData)
         .then((response) => {

@@ -14,7 +14,7 @@
 export default {
   data() {
     return {
-      visiabe: 1, // 1 打开弹窗，0 关闭弹窗
+      visiabe: true, 
       message: "请稍等，正在重新身份认证...",
       redirectURL: null,
     };

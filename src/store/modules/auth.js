@@ -49,7 +49,7 @@ const actions = {
                     // 状态赋值 
                     commit('SET_USER_STATE', data)
                 }
-                resolve(response) // 不要少了 ，正常响应钩子      
+                resolve(response) // 正常响应钩子      
             }).catch(error => {
                 // 重置状态
                 commit('RESET_USER_STATE')
