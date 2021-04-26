@@ -26,17 +26,14 @@ export default {
   },
 
   methods: {
-    // 通过刷新令牌获取新的认证信息
     refreshLogin() {
       this.$store
         .dispatch("SendRefreshToken")
         .then((response) => {
           this.message = "刷新成功，重写向回应用";
-          // 刷新成功，重写向回应用
           window.location.href = this.redirectURL;
         })
         .catch((error) => {
-          // 刷新失败，去登录页
           this.message = `您的身份已过期，请点击<a  href="/?redirectURL=${this.redirectURL}">重新登录<a> `;
         });
     },
