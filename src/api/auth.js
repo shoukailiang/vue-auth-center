@@ -42,8 +42,6 @@ export function register(data) {
 
 export function getXieyi() {
     return request({
-        // 如果当前url带上了请求参数，如 ?redirectURL=xxx ，就会获取不到协议内容
-        // url: `${window.location.href}/xieyi.html`, // 访问到的是 public/xieyi.html     // 下面方式才能保证正确获取协议内容
         url: `${window.location.protocol}//${window.location.host}/xieyi.html`,
         method: 'get'
     })

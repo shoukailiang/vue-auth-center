@@ -1,9 +1,9 @@
 <template>
   <div class="app-header">
     <div class="logo">
-       <a href="/" title="IT ALLEY">
-       <img src="@/assets/image/logo.png" height="50px">
-       </a>
+      <a href="/" title="IT ALLEY">
+        <img src="@/assets/image/logo.png" height="50px">
+      </a>
     </div>
   </div>
 </template>
@@ -17,7 +17,7 @@
 
 .logo {
     width: 1200px;
-    margin: 0 auto; /* 居中 */
+    margin: 0 auto; 
     overflow: hidden;
     margin-top: 15px;
 }

@@ -15,7 +15,6 @@
 
           <!-- 登录 -->
           <div class="form_body" v-if="reverse == 1">
-            <!-- submit.prevent 阻止默认表单事件提交，采用loginSubmit -->
             <form @submit.prevent="loginSubmit">
               <input
                 type="text"
@@ -121,12 +120,10 @@ export default {
       xieyiContent: null, // 协议内容
       redirectURL: "http://localhost:3000", // 登录成功后重写向地址
       loginData: {
-        // 登录表单数据
         username: "",
         password: "",
       },
       registerData: {
-        // 注册表单数据
         username: "",
         password: "",
         repPassword: "",
@@ -135,7 +132,6 @@ export default {
     };
   },
   async created() {
-    // 判断url中是否带有redirecturl参数
     if (this.$route.query.redirectURL) {
       this.redirectURL = this.$route.query.redirectURL;
     }
