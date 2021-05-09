@@ -11,7 +11,6 @@ const state = {
 // 改变状态值
 const mutations = {
     SET_USER_STATE(state, data) {
-        console.log('SET_USER_STATE', data)
         const { userInfo, access_token, refresh_token } = data
         state.userInfo = userInfo
         state.accessToken = access_token
